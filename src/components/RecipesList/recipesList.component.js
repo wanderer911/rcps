@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { time } from '../../helpers';
 
 export const RecipeListComponent = props=> {
 	const {items} = props;
@@ -17,7 +18,7 @@ export const RecipeListComponent = props=> {
 				<tbody>
 					{ items.recipesList.map((item) =>
 						<tr key={item._id }>
-							<td>{item.updated}</td>
+							<td>{time(item.updated)}</td>
 							<td>{item.title}</td>
 							<td><Link to={'/recipe/'+item._id} ><button type="button" className="btn btn-primary">Details</button></Link></td>
 						</tr>
@@ -29,7 +30,7 @@ export const RecipeListComponent = props=> {
 				{ items.recipesList.map((item) =>
 					<Link to={'/recipe/'+item._id} key={item._id }>
 						<div className="list-group-item list-group-item-primary row version"  >
-							<div className="offset-sm-1"><i>{item.updated}</i></div>
+							<div className="offset-sm-1"><i>{time(item.updated)}</i></div>
 							<div className="offset-sm-1">{item.title}</div>
 						</div>
 					</Link>

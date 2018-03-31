@@ -1,4 +1,5 @@
 import React from 'react';
+import { time } from '../../helpers';
 
 class RecipesVersions extends React.Component {
 	constructor(props){
@@ -23,7 +24,7 @@ class RecipesVersions extends React.Component {
 		return (
 			<div>
 				<div className="list-group-item list-group-item-primary row version"  onClick={this.handleClick} >
-					<div className="offset-sm-1"><i>{item.updated}</i></div>
+					<div className="offset-sm-1"><i>{time(item.updated)} </i></div>
 					<div className="offset-sm-1">{item.title}</div>
 				</div>
 				<div>{element}</div>

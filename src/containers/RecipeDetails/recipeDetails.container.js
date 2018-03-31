@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { recipeActions } from '../../actions';
 import { RecipeDetailsComponent } from '../../components';
 import { UpdateRecipe } from '../';
-
+import { time } from '../../helpers';
 class DetailsPage extends React.Component {
 	constructor(props){
 		super(props);
@@ -71,8 +71,8 @@ class DetailsPage extends React.Component {
           		{editBtn}
           		<button type="button" className="btn btn-danger" onClick={this.handleDelete}>Delete</button>
           	</p>
-          	<p>Created {recipes.selectedRecipe.updated }</p>
-          	<p>Last update {recipes.selectedRecipe.updated }</p>
+          	<p>Created {time(recipes.selectedRecipe.created) }</p>
+          	<p>Last update {time(recipes.selectedRecipe.updated) }</p>
           </div>
 				}
 				{!edit && recipes.selectedRecipe && 
