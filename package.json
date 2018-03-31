@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.3",
     "mongojs": "^2.5.0",
     "react": "^16.2.0",
@@ -19,6 +20,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test-jest": "jest",
+    "eject": "react-scripts eject",
+    "compile": "node server.js",
+    "precompile": "react-scripts build",
+    "compiled": "node server js"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.3"
   }
 }

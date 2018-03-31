@@ -1,3 +1,9 @@
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  word-wrap: break-word;
+  vertical-align: baseline;
+}
+
 .App {
   text-align: center;
 }
@@ -32,9 +38,19 @@
 }
 
 .details-menu {
-  background-color:seashell;
+  background-color:#faf9fa;
 }
 
 .version {
   cursor: pointer;
+}
+
+.my-nav{
+  background-color: #6441a4;
+  color: #d3cae8;
+}
+
+.navbar-brand:hover{
+  text-decoration: underline;
+  color:#0e9bd8 !important;
 }

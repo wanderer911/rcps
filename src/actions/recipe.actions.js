@@ -1,7 +1,7 @@
 import { recipeConstants } from '../constants';
 import { alertActions } from './';
 import { history } from '../helpers';
-import { recipeService } from '../services';
+import {  recipeService } from '../services';
 
 export const recipeActions = {
   createRecipe,
@@ -18,9 +18,7 @@ function createRecipe(title,description){
       console.log(title,description);
       let recipe = await recipeService.createRecipe(title,description);
       dispatch(success(recipe));
-      //temp
-      //history.push('/'); 
-      history.push('/recipe/' + recipe.id); 
+      history.push('/recipe/' + recipe._id); 
     } catch (error){
       dispatch(failure(error));
       dispatch(alertActions.error(error));
@@ -91,10 +89,12 @@ function getRecipeById(id){
     try {
       let recipe = await recipeService.getRecipeById(id);
       dispatch(success(recipe));
+      console.log(recipe);
 
     } catch(error){
       dispatch(failure(error));
       dispatch(alertActions.error(error));
+      console.log(error.response.data)
     }
   }
   function request() { return { type: recipeConstants.GETBYID_REQUEST } }

@@ -4,25 +4,25 @@ import { recipeActions } from '../../actions';
 import { RecipeListComponent } from '../../components';
 
 class RecipesListPage extends React.Component {
-  componentDidMount() {
-      this.props.dispatch(recipeActions.getAllRecipes());
-  }
+	componentDidMount() {
+		this.props.dispatch(recipeActions.getAllRecipes());
+	}
 
-  render(){
-    const { recipes } = this.props;
-    return (
-    <div>
-      {recipes.loading ? <em>Loading Recipes ...</em>: <RecipeListComponent items={recipes}/>}
-    </div>
-    )
-  }
+	render(){
+		const { recipes } = this.props;
+		return (
+			<div>
+				{recipes.loading ? <em>Loading Recipes ...</em>: <RecipeListComponent items={recipes}/>}
+			</div>
+		);
+	}
 }
 
 function mapStateToProps(state) {
-  const { recipes } = state;
-  return {
-    recipes
-  };
+	const { recipes } = state;
+	return {
+		recipes
+	};
 }
 
 

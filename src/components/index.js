@@ -1,3 +1,4 @@
 export * from './RecipeDetails';
 export * from './RecipesList';
-export * from './recipeVersions';
+export * from './RecipeVersions';
+export * from './PageNotFound';
