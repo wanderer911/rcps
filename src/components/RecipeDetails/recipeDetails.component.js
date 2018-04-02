@@ -1,6 +1,6 @@
 import React from 'react';
 import { RecipesVersions } from '../';
-
+// git doesnt change folder name
 // TODO ADD MORE VISUAL STUFF
 export const RecipeDetailsComponent = props=> {
 	const {item} = props;
