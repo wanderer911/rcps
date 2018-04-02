@@ -1,5 +1,4 @@
-//import {alert as reducer} from './alert.reducer';
-/*
+import {alert as reducer} from './alert.reducer';
 import { alertConstants } from '../constants';
 
 
@@ -44,4 +43,3 @@ describe('alert reducer', () => {
 		).toEqual({});
 	});
 });
-*/
