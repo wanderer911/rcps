@@ -8,7 +8,7 @@ export const RecipeDetailsComponent = props=> {
 		<div className="col-sm-12 col-md-8 col-lg-6 details-menu">
 			<h3><b><i>{item.title }</i></b></h3>
 			<p>{item.description }</p>
-			<br>
+			<br/>
 			<div>
 				{item.versions.length?<p>Previous versions</p>:<p>No previous versions</p>}
 				{item.versions.map((item) =>
